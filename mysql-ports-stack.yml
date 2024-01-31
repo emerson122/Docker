@@ -1,0 +1,15 @@
+# Use root/mysql as user/password credentials
+
+version: '3.8'
+
+services:
+
+    db:
+        image: mysql
+        command:
+            --default-authentication-plugin=mysql_native_password
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: Q!8J^Y7-54f8v23A
+        ports:
+            - "33306:3306"
